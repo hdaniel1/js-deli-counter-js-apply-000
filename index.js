@@ -15,8 +15,9 @@ function currentLine(line) {
     return 'The line is currently empty.'
   }
   var array = []
-  for (let i = 0; i < line.length; i++) {
+  while (line[i]) {
     array.push(` ${i+1}. ${line[i]}`)
+    i++
   }
   return `The line is currently:${array.toString()}`
 }
